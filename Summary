@@ -1,0 +1,2 @@
+Problem Statement 1: Dockerized the Wisecow application, set up Kubernetes deployment, configured CI/CD with GitHub Actions, and ensured TLS communication.
+Problem Statement 2: Created a Bash script for system health monitoring and a Python script for application health checking.
