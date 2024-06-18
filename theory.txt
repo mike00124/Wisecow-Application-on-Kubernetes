@@ -1,0 +1,27 @@
+Let's break down each problem statement and its requirements step by step. We'll start with Problem Statement 1 and then move on to Problem Statement 2.
+
+Problem Statement 1: Containerisation and Deployment of Wisecow Application on Kubernetes
+Steps to Achieve the Objective
+Dockerization:
+
+Develop a Dockerfile for the Wisecow application.
+Kubernetes Deployment:
+
+Create Kubernetes manifest files to deploy the Wisecow application.
+Expose the application as a Kubernetes service.
+Continuous Integration and Deployment (CI/CD):
+
+Set up a GitHub Actions workflow to automate the build and push of the Docker image.
+Implement continuous deployment to the Kubernetes environment.
+TLS Implementation:
+
+Ensure the application supports secure TLS communication.
+Artifacts to be Delivered
+Dockerfile for the Wisecow application.
+Kubernetes manifest files (Deployment, Service, Ingress).
+GitHub Actions workflow file for CI/CD.
+Application Source Code in a public GitHub repository.
+Step-by-Step Implementation
+Dockerization
+Create Dockerfile:
+Place this Dockerfile in the root of your Wisecow application repository.
