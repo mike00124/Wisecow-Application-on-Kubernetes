@@ -1,0 +1,31 @@
+Objective 1: System Health Monitoring Script (Bash)
+Create a script named health_monitor.sh:
+#!/bin/bash
+
+# Thresholds
+CPU_THRESHOLD=80
+MEMORY_THRESHOLD=80
+DISK_THRESHOLD=80
+
+# Get system usage
+CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+MEMORY_USAGE=$(free | grep Mem | awk '{print $3/$2 * 100.0}')
+DISK_USAGE=$(df -h / | grep / | awk '{ print $5 }' | sed 's/%//g')
+
+# Log file
+LOG_FILE="/var/log/system_health.log"
+
+# Function to check usage and log if threshold is exceeded
+check_usage() {
+  local usage=$1
+  local threshold=$2
+  local type=$3
+
+  if (( $(echo "$usage > $threshold" | bc -l) )); then
+    echo "$(date): ${type} usage is at ${usage}%!" | tee -a $LOG_FILE
+  fi
+}
+
+check_usage $CPU_USAGE $CPU_THRESHOLD "CPU"
+check_usage $MEMORY_USAGE $MEMORY_THRESHOLD "Memory"
+check_usage $DISK_USAGE $DISK_THRESHOLD "Disk"
