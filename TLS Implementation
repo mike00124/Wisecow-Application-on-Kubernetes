@@ -1,0 +1,2 @@
+Create a Kubernetes Secret for TLS:
+kubectl create secret tls wisecow-tls --cert=path/to/tls.crt --key=path/to/tls.key
