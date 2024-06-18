@@ -1,0 +1,11 @@
+Your GitHub repository should have the following structure
+wisecow/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── deployment.yaml
+├── service.yaml
+├── ingress.yaml
+├── Dockerfile
+├── requirements.txt
+└── app.py
